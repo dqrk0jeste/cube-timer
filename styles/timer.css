@@ -1,0 +1,132 @@
+.background{
+  position: relative;
+}
+
+.background-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.timer-container {
+  position: absolute;
+  z-index: 100;
+  top: 200px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.timer {
+  display: inline-block;
+  color: white;
+  z-index: 100;
+  font-size: 150px;
+  text-shadow: 0px 0px 10px white;
+  padding: 3px 10px;
+  line-height: 120px;
+  transition: font-size 0.3s;
+}
+
+.border {
+  padding: 1px 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.times-list {
+  position: absolute;
+  top: 380px;
+  width: 100%;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 8px;
+  width: 100%;
+  text-shadow: 0px 0px 10px #f0f0f0;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.average-container {
+  position: absolute;
+  bottom: 55px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 20px;
+  opacity: 0.7;
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: opacity 0.3s;
+}
+
+.time-span {
+  position: relative;
+  cursor: pointer;
+}
+
+.delete-button {
+  position: absolute;
+  top: 16px;
+  right: -35px;
+  background-color: transparent;
+  border: none;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+  padding: 2px 1px 0px 1px;
+  line-height: 25px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.delete-button:hover {
+  opacity: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  padding: 1px 1px 0px 1px;
+}
+
+.delete-button:active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.time-span:hover {
+  .delete-button {
+    opacity: 1;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.bigger-font {
+  font-size: 180px;
+}
+
+@media (max-width: 600px) {
+  .average-container-container {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .average-container {
+    position: unset;
+  }
+}

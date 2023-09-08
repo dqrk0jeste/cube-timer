@@ -1,0 +1,1 @@
+let timesList = JSON.parse(localStorage.getItem('timesList')) || [];
