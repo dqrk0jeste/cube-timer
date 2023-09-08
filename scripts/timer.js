@@ -73,7 +73,7 @@ function checkAndStop(e) {
     setTimeout(() => {
       document.body.addEventListener('keydown', checkAndReady);
       document.body.addEventListener('keyup', checkAndStart); 
-    }, 1000); 
+    }, 300); 
   }
 }
 
