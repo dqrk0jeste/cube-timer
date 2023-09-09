@@ -9,6 +9,20 @@
   z-index: 0;
 }
 
+.scramble-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+  font-size: 32px;
+  color: white;
+}
+
 .timer-container {
   position: absolute;
   z-index: 100;

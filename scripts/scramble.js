@@ -13,7 +13,7 @@ export function generateScramble() {
       count++;
     }
   }
-  console.log(scramble);
+  return scramble;
 }
 
 function random(n) {

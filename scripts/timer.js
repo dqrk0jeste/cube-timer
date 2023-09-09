@@ -1,3 +1,5 @@
+import { generateScramble } from './scramble.js';
+
 function displayTimes() {
   let timesListHTML = '';
   for(let i = 1; i <= 5; i++) {
@@ -42,6 +44,12 @@ function displayTimes() {
     });
   });
 
+  console.log(generateScramble());
+
+  document.querySelector('.js-scramble-container').innerHTML = `
+    <p>${generateScramble()}</p>
+  `;
+
 }
 
 function checkAndReady(e) {
@@ -66,6 +74,7 @@ function checkAndStop(e) {
 
     document.querySelector('.js-times-list').classList.remove('hidden');
     document.querySelector('.js-average-container').classList.remove('hidden');
+    document.querySelector('.js-scramble-container').classList.remove('hidden');
     document.querySelector('.js-timer').classList.remove('bigger-font');
 
     document.body.removeEventListener('keypress', checkAndStop);
@@ -86,6 +95,7 @@ function startTimer() {
   document.querySelector('.js-timer').classList.remove('border');
   document.querySelector('.js-times-list').classList.add('hidden');
   document.querySelector('.js-average-container').classList.add('hidden');
+  document.querySelector('.js-scramble-container').classList.add('hidden');
 
   let timer = document.querySelector('.js-timer');
   timer.classList.add('bigger-font');
