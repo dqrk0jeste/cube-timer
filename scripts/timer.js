@@ -43,13 +43,12 @@ function displayTimes() {
       deleteTime(button.dataset.index);
     });
   });
+}
 
-  console.log(generateScramble());
-
+function displayScramble() {
   document.querySelector('.js-scramble-container').innerHTML = `
     <p>${generateScramble()}</p>
   `;
-
 }
 
 function checkAndReady(e) {
@@ -71,6 +70,7 @@ function checkAndStop(e) {
     localStorage.setItem('timesList', JSON.stringify(timesList));
 
     displayTimes();
+    displayScramble();
 
     document.querySelector('.js-times-list').classList.remove('hidden');
     document.querySelector('.js-average-container').classList.remove('hidden');
@@ -123,6 +123,7 @@ function deleteTime(i) {
 }
 
 displayTimes();
+displayScramble();
 
 let time;
 let timerId;
